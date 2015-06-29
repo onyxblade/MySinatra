@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require_relative '../lib/generator'
+
+unless ARGV.empty?
+  case
+  when ARGV[0] == 'new' && ARGV[1]
+    generate_project ARGV[1]
+  when ARGV[0] == 'g' && ARGV[1] == 'controller' && ARGV[2]
+    
+  end
+end
