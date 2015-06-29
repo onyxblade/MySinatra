@@ -1,13 +1,16 @@
 #!/usr/bin/env ruby
 require_relative '../lib/generator'
 require './app'
+require 'erb'
 
 unless ARGV.empty?
   case
   when ARGV[0] == 'new' && ARGV[1]
     generate_project ARGV[1]
   when ARGV[0] == 'g' && ARGV[1] == 'controller' && ARGV[2]
-  
+    generate_controller ARGV[2]
+  when ARGV[0] == 'g' && ARGV[1] == 'model' && ARGV[2]
+    generate_model ARGV[2]
   when ARGV[0] == 'g' && ARGV[1] == 'migration' && ARGV[2]
     generate_migration ARGV[2]
   when ARGV[0] == 'db:migrate'
