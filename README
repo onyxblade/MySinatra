@@ -1,0 +1,15 @@
+MySinatra
+=====
+
+自制的一个Sinatra Project Generator。早日脱离Padrino，早日获得新生。
+
+###Usage
+
+```shell
+smx new new_project
+smx g controller new_controller
+smx g model new_model
+smx g migration new_migration
+smx db:migrate
+smx db:rollback
+```
